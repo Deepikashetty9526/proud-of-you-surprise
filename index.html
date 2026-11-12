@@ -1,0 +1,1252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff5f5">
+<title>For My Bangaara ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #e89bad;
+  --dark-pink: #bd607e;
+  --light-pink: #fff0f3;
+  --cream: #fffaf3;
+  --brown: #59414a;
+  --gold: #d4ad68;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+button { font: inherit; }
+
+button:focus-visible {
+  outline: 3px solid var(--dark-pink);
+  outline-offset: 4px;
+}
+
+.background-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.float-heart {
+  position: absolute;
+  bottom: -40px;
+  opacity: 0;
+  animation: floatUp 9s linear infinite;
+  color: #e6a0b1;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  10% { opacity: .55; }
+  85% { opacity: .35; }
+  100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.brand {
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-pink);
+  font-size: 21px;
+}
+
+.progress-wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 24px 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #a47d88;
+  margin-bottom: 8px;
+}
+
+.progress-track {
+  height: 4px;
+  border-radius: 10px;
+  background: #f2dfe3;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 14.285%;
+  border-radius: 10px;
+  background: var(--pink);
+  transition: width .4s ease;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  min-height: 78vh;
+  padding: 10px 18px 50px;
+}
+
+.screen {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: appear .55s ease both;
+}
+
+.screen.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.center { text-align: center; }
+
+.eyebrow {
+  color: var(--dark-pink);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 58px);
+  line-height: 1.18;
+  margin: 15px 0;
+}
+
+h2 {
+  font-size: clamp(29px, 6vw, 42px);
+  line-height: 1.25;
+  margin: 12px 0;
+}
+
+h3 { font-size: 21px; }
+
+p {
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.script {
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-pink);
+}
+
+.muted { color: #947983; }
+
+.hero {
+  min-height: 67vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner { max-width: 540px; }
+
+.envelope {
+  position: relative;
+  width: 170px;
+  height: 120px;
+  margin: 36px auto 30px;
+  border-radius: 8px;
+  background: #edb3c0;
+  box-shadow: 0 16px 35px #d8a1b340;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border: none;
+  transition: transform .25s;
+}
+
+.envelope:hover { transform: translateY(-5px) rotate(-2deg); }
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f7ccd5;
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
+  border-radius: 8px 8px 0 0;
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #e9a4b5;
+  clip-path: polygon(0 100%, 0 0, 50% 60%, 100% 0, 100% 100%);
+  border-radius: 0 0 8px 8px;
+}
+
+.envelope-heart {
+  z-index: 1;
+  font-size: 35px;
+  filter: drop-shadow(0 3px 4px #b7637c55);
+}
+
+.primary, .secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.primary {
+  color: white;
+  background: var(--dark-pink);
+  box-shadow: 0 6px 18px #bd607e30;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 24px #bd607e45;
+}
+
+.secondary {
+  color: var(--dark-pink);
+  background: white;
+  border: 1px solid #f0d5dd;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.big-emoji {
+  font-size: clamp(65px, 17vw, 105px);
+  line-height: 1.5;
+  margin: 5px 0;
+  display: block;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f3dfe4;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px #ad73800b;
+}
+
+.celebration-card {
+  background: linear-gradient(150deg, #fff3f5, #fffaf1);
+  border: 1px solid #f4dce2;
+  border-radius: 28px;
+  padding: clamp(25px, 6vw, 46px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sparkle { color: var(--gold); }
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.note {
+  background: #fff;
+  border: 1px solid #f1dce2;
+  border-radius: 18px;
+  padding: 19px 15px;
+  min-height: 130px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--brown);
+  transition: transform .2s, background .2s;
+}
+
+.note:hover { transform: translateY(-3px); }
+
+.note .note-icon { font-size: 27px; display: block; margin-bottom: 12px; }
+
+.note strong { font-size: 14px; line-height: 1.5; }
+
+.note .reveal {
+  display: none;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 12px;
+  color: #875b69;
+}
+
+.note.open { background: #fff0f4; }
+.note.open .reveal { display: block; }
+
+.question {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 5vw, 30px);
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.answer-list {
+  display: grid;
+  gap: 11px;
+  margin: 25px auto;
+  max-width: 510px;
+}
+
+.answer {
+  text-align: left;
+  padding: 15px 17px;
+  border-radius: 15px;
+  background: white;
+  border: 1px solid #f0dce2;
+  cursor: pointer;
+  color: var(--brown);
+  transition: .2s;
+  line-height: 1.5;
+}
+
+.answer:hover { border-color: var(--pink); }
+.answer.selected { background: #ffedf2; border: 2px solid var(--pink); }
+.answer.correct { background: #ffedf2; border: 2px solid #d787a0; }
+
+.feedback {
+  display: none;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: #fff0f4;
+  line-height: 1.8;
+}
+
+.feedback.show { display: block; animation: appear .4s ease; }
+
+.open-when {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.when-btn {
+  border: 1px solid #f1d9e0;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px 12px;
+  cursor: pointer;
+  color: var(--brown);
+  min-height: 135px;
+  line-height: 1.6;
+  transition: .2s;
+}
+
+.when-btn:hover { transform: translateY(-3px); background: #fff3f6; }
+.when-btn span { display: block; font-size: 28px; margin-bottom: 10px; }
+.when-btn strong { font-size: 13px; }
+
+.when-message {
+  display: none;
+  margin-top: 20px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #f2dce3;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.when-message.show { display: block; animation: appear .4s ease; }
+
+.gift {
+  width: 140px;
+  height: 120px;
+  margin: 25px auto;
+  position: relative;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.gift:hover { transform: scale(1.06) rotate(-2deg); }
+
+.gift-lid {
+  height: 28px;
+  background: #d9809a;
+  border-radius: 6px;
+  position: absolute;
+  top: 15px;
+  left: -7px;
+  right: -7px;
+  z-index: 2;
+  transition: transform .5s;
+}
+
+.gift-box {
+  position: absolute;
+  top: 42px;
+  height: 78px;
+  width: 140px;
+  border-radius: 4px 4px 9px 9px;
+  background: #efb2c1;
+}
+
+.gift-ribbon {
+  position: absolute;
+  left: 57px;
+  top: 15px;
+  width: 26px;
+  height: 105px;
+  background: #fff0bd;
+  z-index: 3;
+}
+
+.gift-bow {
+  position: absolute;
+  top: -1px;
+  left: 43px;
+  font-size: 39px;
+  z-index: 4;
+  transition: transform .5s;
+}
+
+.gift.open .gift-lid { transform: translate(-13px, -34px) rotate(-20deg); }
+.gift.open .gift-bow { transform: translateY(-30px) rotate(-15deg); }
+
+.gift-message {
+  display: none;
+  background: #fff0f4;
+  border-radius: 20px;
+  padding: 24px;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+
+.gift-message.show { display: block; animation: appear .5s ease; }
+
+.letter-intro { margin-bottom: 30px; }
+
+.letter-paper {
+  background: #fffdf8;
+  border: 1px solid #ecd9c3;
+  border-radius: 5px;
+  box-shadow: 0 12px 38px #a88c7020;
+  padding: clamp(22px, 6vw, 48px);
+  position: relative;
+}
+
+.letter-paper:before {
+  content: "♡";
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: var(--dark-pink);
+  margin-bottom: 25px;
+}
+
+.letter-paper p {
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 0 20px;
+  white-space: normal;
+}
+
+.letter-paper .letter-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  line-height: 1.4;
+  color: var(--dark-pink);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.letter-paper strong { color: #7b4859; }
+
+.letter-signoff {
+  text-align: right;
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-pink);
+  font-size: 19px !important;
+}
+
+.final-heart {
+  font-size: 43px;
+  margin-top: 28px;
+  animation: heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.1); }
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px 40px;
+  color: #a88790;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.heart-button {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 5;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 20px #8e53621c;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.heart-pop {
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+  font-size: 24px;
+  animation: pop 1.3s ease forwards;
+}
+
+@keyframes pop {
+  0% { opacity: 1; transform: translateY(0) scale(.6); }
+  100% { opacity: 0; transform: translateY(-130px) scale(1.5) rotate(25deg); }
+}
+
+.confetti {
+  position: fixed;
+  z-index: 20;
+  top: -15px;
+  pointer-events: none;
+  animation: fall 3.5s linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(650deg); opacity: 0; }
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid #f1e3e4;
+}
+
+.nav-bottom button { font-size: 13px; }
+
+.nav-bottom .back { margin-right: auto; }
+.nav-bottom .next { margin-left: auto; }
+
+.hidden { display: none !important; }
+
+@media (max-width: 420px) {
+  main { padding-left: 14px; padding-right: 14px; }
+  .note-grid, .open-when { gap: 9px; }
+  .note { padding: 15px 12px; }
+  .card { padding: 20px 16px; }
+  .letter-paper { padding: 22px 18px; }
+  .letter-paper p { font-size: 13.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-hearts" id="backgroundHearts"></div>
+
+<header>
+  <div class="brand">for my Bangaara ♡</div>
+</header>
+
+<div class="progress-wrap" id="progressWrap">
+  <div class="progress-label">
+    <span id="progressText">A little surprise</span>
+    <span id="progressCount">1 of 7</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+</div>
+
+<main>
+
+<!-- 1. WELCOME -->
+<section class="screen active" id="screen-1">
+  <div class="hero center">
+    <div class="hero-inner">
+      <div class="eyebrow">a tiny something, made with love</div>
+      <h1>Hey, my<br><span class="script">Bangaara!</span> ♡</h1>
+      <p class="muted">
+        Someone very special deserves a little something special.
+        And guess what? It's all for you, babe. 🥹
+      </p>
+
+      <button class="envelope" onclick="nextScreen()" aria-label="Open your surprise">
+        <span class="envelope-heart">♥</span>
+      </button>
+
+      <p class="script">Psst… tap the envelope!</p>
+      <div class="button-row">
+        <button class="primary" onclick="nextScreen()">Open your surprise ♡</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROMOTION CELEBRATION -->
+<section class="screen" id="screen-2">
+  <div class="celebration-card">
+    <div class="eyebrow">breaking news!!</div>
+    <span class="big-emoji">🥁🎉</span>
+    <h1>HE GOT<br><span class="script">PROMOTED!!</span></h1>
+    <p>
+      And that someone happens to be my favourite human
+      in the entire universe. 🥹❤️
+    </p>
+    <p>
+      Congratulations, babe! I wish I could be there to hug you
+      until you tell me to stop. But since I can't do that right now,
+      this little corner of the internet is all yours.
+    </p>
+    <p class="script">You did it, Bangaara! ✨</p>
+    <button class="primary" onclick="celebrate()">Celebrate with me! 🎊</button>
+  </div>
+  <div class="nav-bottom">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+    <button class="primary next" onclick="nextScreen()">A little something more →</button>
+  </div>
+</section>
+
+<!-- 3. ENCOURAGEMENT NOTES -->
+<section class="screen" id="screen-3">
+  <div class="center">
+    <div class="eyebrow">a few little reminders</div>
+    <h2>Things I want you<br>to remember <span class="script">♡</span></h2>
+    <p class="muted">Tap each little note, babe. They're all for you.</p>
+  </div>
+
+  <div class="note-grid">
+    <button class="note" onclick="toggleNote(this)">
+      <span class="note-icon">🌟</span>
+      <strong>You're capable of more than you realise.</strong>
+      <span class="reveal">Sometimes you might not see it yourself, but I do. Keep believing in that wonderful mind of yours.</span>
+    </button>
+
+    <button class="note" onclick="toggleNote(this)">
+      <span class="note-icon">🌱</span>
+      <strong>You don't have to figure everything out at once.</strong>
+      <span class="reveal">Take things one step at a time. You are allowed to learn, change your mind and grow at your own pace.</span>
+    </button>
+
+    <button class="note" onclick="toggleNote(this)">
+      <span class="note-icon">🎉</span>
+      <strong>You deserve to celebrate yourself.</strong>
+      <span class="reveal">Don't rush past your achievements while chasing the next one. Pause, smile and be proud of yourself, okay?</span>
+    </button>
+
+    <button class="note" onclick="toggleNote(this)">
+      <span class="note-icon">🧸</span>
+      <strong>You can have difficult days, too.</strong>
+      <span class="reveal">You don't have to be strong all the time. You can rest, talk, be quiet or simply be yourself with me.</span>
+    </button>
+
+    <button class="note" onclick="toggleNote(this)" style="grid-column: 1 / -1">
+      <span class="note-icon">❤️</span>
+      <strong>I'll always be cheering for you.</strong>
+      <span class="reveal">Not only when you win, but also when you're trying, learning, struggling and figuring things out. I'm proud of you, Bangaara.</span>
+    </button>
+  </div>
+
+  <div class="nav-bottom">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+    <button class="primary next" onclick="nextScreen()">Next, my love →</button>
+  </div>
+</section>
+
+<!-- 4. CUTE QUIZ -->
+<section class="screen" id="screen-4">
+  <div class="center">
+    <div class="eyebrow">little question time</div>
+    <span class="big-emoji">🧸💕</span>
+    <h2>How well do you know your girl?</h2>
+    <p class="muted">Okay, Bangaara… let's see what you know. Hehe.</p>
+  </div>
+
+  <div class="card">
+    <p class="question">
+      When your girl is finally with you, what is she most likely to do first? ♡
+    </p>
+
+    <div class="answer-list" id="answerList">
+      <button class="answer" onclick="selectAnswer(this, false)">
+        A. Steal all your hugs and kisses 😚
+      </button>
+      <button class="answer" onclick="selectAnswer(this, false)">
+        B. Annoy you until you laugh 😂
+      </button>
+      <button class="answer" onclick="selectAnswer(this, false)">
+        C. Hold your hand and never let go 🥹
+      </button>
+      <button class="answer" onclick="selectAnswer(this, true)">
+        D. All of the above, obviously! ❤️
+      </button>
+    </div>
+
+    <div class="center">
+      <button class="primary" onclick="revealAnswer()">Reveal your answer ♡</button>
+    </div>
+
+    <div class="feedback" id="quizFeedback" aria-live="polite">
+      <h3 class="script">Hehe, you know your girl! 🥹❤️</h3>
+      The correct answer is ALL OF THE ABOVE!
+      You have no idea how many hugs and kisses you're going to get,
+      Bangaara. Consider yourself warned. 😚💕
+    </div>
+  </div>
+
+  <div class="nav-bottom">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+    <button class="primary next" onclick="nextScreen()">One more thing →</button>
+  </div>
+</section>
+
+<!-- 5. OPEN WHEN -->
+<section class="screen" id="screen-5">
+  <div class="center">
+    <div class="eyebrow">little letters, just for you</div>
+    <h2>Open when… <span class="script">💌</span></h2>
+    <p class="muted">For the days when you need a little reminder from your girl.</p>
+  </div>
+
+  <div class="open-when">
+    <button class="when-btn" onclick="openWhen(0)">
+      <span>☁️</span>
+      <strong>When you're tired</strong>
+    </button>
+    <button class="when-btn" onclick="openWhen(1)">
+      <span>✨</span>
+      <strong>When you doubt yourself</strong>
+    </button>
+    <button class="when-btn" onclick="openWhen(2)">
+      <span>💗</span>
+      <strong>When you miss me</strong>
+    </button>
+    <button class="when-btn" onclick="openWhen(3)">
+      <span>🎉</span>
+      <strong>When something good happens</strong>
+    </button>
+  </div>
+
+  <div class="when-message" id="whenMessage" aria-live="polite"></div>
+
+  <div class="nav-bottom">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+    <button class="primary next" onclick="nextScreen()">A little surprise awaits →</button>
+  </div>
+</section>
+
+<!-- 6. SECRET GIFT -->
+<section class="screen" id="screen-6">
+  <div class="center">
+    <div class="eyebrow">between you and me</div>
+    <h2>You didn't think this was all, did you? 👀</h2>
+    <p class="muted">Bangaara, there's something waiting for you…</p>
+
+    <button class="gift" id="gift" onclick="openGift()" aria-label="Open the surprise gift">
+      <span class="gift-lid"></span>
+      <span class="gift-box"></span>
+      <span class="gift-ribbon"></span>
+      <span class="gift-bow">🎀</span>
+    </button>
+
+    <p class="script">Tap your little gift to unlock it ♡</p>
+
+    <div class="gift-message" id="giftMessage" aria-live="polite">
+      <span class="big-emoji">🥹🎁❤️</span>
+      <h2 class="script">The celebrations aren't over!</h2>
+      <p>
+        Bangaara, our celebration is still waiting for us.
+        I've planned something special, and this is only a tiny preview.
+      </p>
+      <p>
+        The real hugs, kisses, laughter and memories are yet to come.
+        It might not happen exactly when I imagined, but I promise
+        this moment hasn't been forgotten.
+      </p>
+      <p class="script">More love and surprises are coming, babe. Hehe. ♡</p>
+    </div>
+  </div>
+
+  <div class="nav-bottom">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+    <button class="primary next" onclick="nextScreen()">One last thing, babe… →</button>
+  </div>
+</section>
+
+<!-- 7. THE COMPLETE ORIGINAL LETTER -->
+<section class="screen" id="screen-7">
+  <div class="center letter-intro">
+    <div class="eyebrow">the most important part</div>
+    <span class="big-emoji">💌</span>
+    <h2>One last thing,<br><span class="script">Bangaara…</span></h2>
+    <p class="muted">This is from my heart, just for you.</p>
+    <button class="primary" id="openLetterButton" onclick="openLetter()">
+      Read my letter ♡
+    </button>
+  </div>
+
+  <article class="letter-paper hidden" id="letterPaper">
+
+    <p class="letter-heading">To my Bangaara, ♡</p>
+
+    <p>Hey babe,</p>
+
+    <p>
+      I wish I could be right there with you, holding your hand,
+      looking at that smile of yours, and telling you just how much
+      you mean to me. There are so many things I want to say to you,
+      and sometimes I feel like even the longest letter wouldn't be
+      enough to explain everything in my heart. But today, I really
+      want you to know a few things.
+    </p>
+
+    <p><strong>First of all, congratulations on your promotion, babe!!♡</strong></p>
+
+    <p>
+      Bangaara, I hope you know how happy I am for you. I know a
+      promotion is not just a new title or another step in your career.
+      It's a reminder of how far you've come, how much you've learned,
+      and how much you're capable of achieving. I hope you take a moment
+      to appreciate yourself and everything that has brought you here.
+      I know there will always be bigger goals, new responsibilities,
+      and more things you want to achieve, but please don't forget to
+      celebrate how far you've already come. You deserve to feel proud
+      of yourself, babe. And if I could, I'd probably annoy you with a
+      hundred hugs, a thousand kisses, and endless reminders of how
+      amazing you are. Hehe. ❤️
+    </p>
+
+    <p><strong>And now, here's to your new beginning. ✨</strong></p>
+
+    <p>
+      A new chapter has started for you, babe, and I hope it brings you
+      happiness, growth, confidence, and so many beautiful opportunities.
+      I know new beginnings can be exciting, but they can also come with
+      pressure, uncertainty, and days when things don't go as expected.
+      You don't have to have everything figured out from the very
+      beginning. Take your time, learn as you go, make mistakes, discover
+      what works for you, and keep becoming the person you want to be.
+      I hope you give yourself the same patience that you give to the
+      things you work hard for. This is the beginning of something new,
+      and I genuinely hope you enjoy the journey instead of worrying
+      only about where it will take you. I can't wait to see all the
+      wonderful things this chapter brings into your life.
+    </p>
+
+    <p><strong>And babe, there's something I want you to remember, always.</strong></p>
+
+    <p>
+      No matter what you choose to do, where life takes you, which
+      dreams you decide to chase, or how many times you change your
+      plans, I want you to know that I'll support you. I won't always
+      have all the answers, and I might not understand every decision
+      immediately, but I want to listen, learn, and understand you.
+      I want to be someone you can talk to when you're excited about
+      something and someone you can turn to when things get difficult.
+      I want to celebrate your wins with you, remind you of your strength
+      when you doubt yourself, and stand beside you while you work
+      towards the things that matter to you. You don't have to be
+      successful every single day or pretend to be strong all the time
+      with me. You can have difficult days, uncertain days, and days
+      when you simply need someone to listen. I'll keep cheering for
+      you, babe, and I'll always want to see you grow into the person
+      you dream of becoming.
+    </p>
+
+    <p><strong>Bangaara, I am SO proud of you. 🥹❤️</strong></p>
+
+    <p>
+      And I don't mean just because of this promotion. I'm proud of
+      your growth, your efforts, your ambitions, and the person you are
+      becoming. I'm proud that you're taking steps forward in your life
+      and opening doors to new possibilities. I know I may not see every
+      little thing you do or every challenge you face, but I hope you
+      know that I notice your journey, and it means so much to me.
+      Your achievements make me happy, but your worth to me has never
+      depended on them. Even on the days when things don't work out,
+      when you're exhausted, or when you feel like you're not doing
+      enough, I hope you remember that I'll still be proud of you.
+      You don't have to achieve something extraordinary every day to
+      deserve love, appreciation, or a little celebration. I am proud
+      of the person you are today, and I'm excited for the person you'll
+      become tomorrow. If there's one thing I want you to carry with
+      you into this new chapter, it's this:
+      <strong>I believe in you, I believe in your dreams, and I am so,
+      so proud of you, Bangaara.</strong>
+    </p>
+
+    <p>And lastly, there's something I've been wanting to tell you.</p>
+
+    <p>
+      I'm sorry I couldn't be there to celebrate your promotion with
+      you the way I wanted to. I really wish I could have been beside
+      you, seen your happiness up close, hugged you tightly, and made
+      this moment feel as special as it deserves to feel. I know being
+      away means I miss out on moments I'd love to share with you, and
+      that makes me sad sometimes. But babe, please don't think I
+      haven't planned anything or that I wanted this milestone to pass
+      like an ordinary day.
+      <strong>I've planned everything for our celebration of your
+      promotion and this beautiful new beginning!</strong> 🥹🎉
+      I want us to have our own little celebration, to make memories,
+      laugh together, and give this moment the happiness it deserves.
+      It might not happen exactly when or how I imagined, but I want
+      you to know that I've been thinking about it because you and
+      your achievements matter so much to me. Consider this letter a
+      tiny preview of the love and excitement I've been saving for you.
+      The celebrations aren't over yet, okay? Hehe. There's still so
+      much love, happiness, and a little surprise waiting for you. ❤️
+    </p>
+
+    <p>
+      Congratulations once again, babe. Here's to your promotion,
+      your new beginning, your dreams, and all the beautiful things
+      waiting for you ahead.
+    </p>
+
+    <p>
+      I hope life gives you countless reasons to smile. I hope you
+      keep believing in yourself, even when things get difficult.
+      And I hope that, through all the changes and new chapters,
+      you never forget that there's someone who will always be
+      cheering for you with her whole heart.
+    </p>
+
+    <p>
+      <strong>
+        I love you, Bangaara. I'm proud of you today, I'll be proud
+        of you tomorrow, and I'll keep cheering for you through all
+        the chapters yet to come.
+      </strong> ♡
+    </p>
+
+    <p class="letter-signoff">
+      Love you,<br>
+      Your girl, Anu. ❤️
+    </p>
+
+  </article>
+
+  <div class="center hidden" id="letterEnding">
+    <div class="final-heart">❤️</div>
+    <h2 class="script">Always your girl.</h2>
+    <p>Today, tomorrow, and through all the chapters yet to come. ♡</p>
+    <p class="muted">Made with all my love, just for you, Bangaara.</p>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      Back to the top ↑
+    </button>
+  </div>
+
+  <div class="nav-bottom" id="finalNavigation">
+    <button class="secondary back" onclick="prevScreen()">← Back</button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  made with love, hugs, kisses & a little bit of madness ♡
+  <br><br>
+  forever cheering for my Bangaara ✨
+</footer>
+
+<button class="heart-button" onclick="popHearts(event)" aria-label="Send some love">♥</button>
+
+<script>
+const TOTAL_SCREENS = 7;
+let currentScreen = 1;
+let selectedAnswer = null;
+let answerRevealed = false;
+let giftOpened = false;
+let letterOpened = false;
+
+const screenNames = [
+  "A little surprise",
+  "Let's celebrate!",
+  "Little reminders",
+  "A cute little quiz",
+  "Open when…",
+  "A secret surprise",
+  "From my heart"
+];
+
+function showScreen(number) {
+  currentScreen = Math.max(1, Math.min(TOTAL_SCREENS, number));
+
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  document.getElementById("screen-" + currentScreen).classList.add("active");
+
+  document.getElementById("progressCount").textContent =
+    currentScreen + " of " + TOTAL_SCREENS;
+
+  document.getElementById("progressText").textContent =
+    screenNames[currentScreen - 1];
+
+  document.getElementById("progressBar").style.width =
+    (currentScreen / TOTAL_SCREENS * 100) + "%";
+
+  document.getElementById("progressWrap").style.display =
+    currentScreen === 1 ? "none" : "block";
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  if (currentScreen === 2) celebrate();
+}
+
+function nextScreen() {
+  if (currentScreen < TOTAL_SCREENS) {
+    showScreen(currentScreen + 1);
+  }
+}
+
+function prevScreen() {
+  if (currentScreen > 1) {
+    showScreen(currentScreen - 1);
+  }
+}
+
+function toggleNote(button) {
+  button.classList.toggle("open");
+}
+
+function selectAnswer(button, correct) {
+  if (answerRevealed) return;
+
+  selectedAnswer = { button, correct };
+
+  document.querySelectorAll(".answer").forEach(answer => {
+    answer.classList.remove("selected");
+  });
+
+  button.classList.add("selected");
+}
+
+function revealAnswer() {
+  if (!selectedAnswer) {
+    const feedback = document.getElementById("quizFeedback");
+    feedback.innerHTML =
+      "Hehe, choose an answer first, Bangaara! 😚❤️";
+    feedback.classList.add("show");
+    return;
+  }
+
+  answerRevealed = true;
+
+  document.querySelectorAll(".answer").forEach(answer => {
+    answer.disabled = true;
+    answer.classList.remove("selected");
+  });
+
+  document.querySelectorAll(".answer")[3].classList.add("correct");
+
+  const feedback = document.getElementById("quizFeedback");
+
+  if (selectedAnswer.correct) {
+    feedback.innerHTML = `
+      <h3 class="script">Hehe, you know your girl! 🥹❤️</h3>
+      You got it right! The answer is ALL OF THE ABOVE!
+      You have no idea how many hugs and kisses you're going to get,
+      Bangaara. Consider yourself warned. 😚💕
+    `;
+  } else {
+    feedback.innerHTML = `
+      <h3 class="script">Wrong answer, babe! Hehe. 😚</h3>
+      The correct answer is ALL OF THE ABOVE, obviously!
+      You are getting the hugs, the kisses, the hand-holding AND
+      all my annoying little antics. No escaping, Bangaara. ❤️
+    `;
+  }
+
+  feedback.classList.add("show");
+  celebrate();
+}
+
+const whenMessages = [
+  {
+    title: "For my tired boy ☁️",
+    text: "Babe, you don't need to be productive every second of every day. You've worked hard, and you're allowed to rest. Take a breath, put the world down for a little while, and be gentle with yourself. You don't have to earn your rest. Sending you the biggest virtual hug. ❤️"
+  },
+  {
+    title: "For the boy who can do hard things ✨",
+    text: "Remember how far you've already come, Bangaara. You have learned, grown and worked your way through things that once felt difficult. You don't need to have every answer today. Take it one step at a time. I believe in you, even on the days when you find it difficult to believe in yourself. ❤️"
+  },
+  {
+    title: "A little hug from your girl 💗",
+    text: "If I could teleport to you right now, I'd be beside you in a second. I'd hold your hand, hug you tightly and probably refuse to let go. Until I can do that for real, imagine me right there with you. Distance may keep me away from your arms today, but you're always close to my heart. I love you, Bangaara. ❤️"
+  },
+  {
+    title: "Guess who's celebrating you? 🎉",
+    text: "ME! ME! ME! Your personal cheerleader is here! Hehe. I'm so happy for you, babe. Tell me everything, let me listen to all the details, and let me be excited with you. You deserve to celebrate your wins, both the big ones and the little ones. I hope you know how proud I am of you. Now come collect your virtual kisses! 😚❤️"
+  }
+];
+
+function openWhen(index) {
+  const box = document.getElementById("whenMessage");
+  const message = whenMessages[index];
+
+  box.innerHTML =
+    "<h3 class='script'>" + message.title + "</h3>" +
+    "<p>" + message.text + "</p>";
+
+  box.classList.add("show");
+  box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function openGift() {
+  if (giftOpened) return;
+
+  giftOpened = true;
+  document.getElementById("gift").classList.add("open");
+
+  setTimeout(() => {
+    document.getElementById("giftMessage").classList.add("show");
+    celebrate();
+  }, 450);
+}
+
+function openLetter() {
+  if (letterOpened) return;
+
+  letterOpened = true;
+
+  const paper = document.getElementById("letterPaper");
+  paper.classList.remove("hidden");
+
+  document.getElementById("openLetterButton").textContent =
+    "Your letter is open ♡";
+
+  document.getElementById("letterEnding").classList.remove("hidden");
+  document.getElementById("finalNavigation").classList.add("hidden");
+
+  paper.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  setTimeout(celebrate, 400);
+}
+
+function celebrate() {
+  const symbols = ["💗", "💕", "✨", "🎉", "♥", "🌸"];
+
+  for (let i = 0; i < 38; i++) {
+    const piece = document.createElement("span");
+    piece.className = "confetti";
+    piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.fontSize = (12 + Math.random() * 17) + "px";
+    piece.style.animationDelay = (Math.random() * 1.3) + "s";
+    piece.style.animationDuration = (2 + Math.random() * 2) + "s";
+
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 5000);
+  }
+}
+
+function popHearts(event) {
+  const button = event.currentTarget;
+  const rect = button.getBoundingClientRect();
+  const symbols = ["❤️", "💕", "💗", "💖", "💘"];
+
+  for (let i = 0; i < 7; i++) {
+    const heart = document.createElement("span");
+    heart.className = "heart-pop";
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = (rect.left + Math.random() * rect.width - 10) + "px";
+    heart.style.top = (rect.top - Math.random() * 15) + "px";
+    heart.style.animationDelay = (Math.random() * .3) + "s";
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1800);
+  }
+}
+
+function createBackgroundHearts() {
+  const container = document.getElementById("backgroundHearts");
+  const symbols = ["♡", "♥", "✧", "⋆"];
+
+  for (let i = 0; i < 16; i++) {
+    const heart = document.createElement("span");
+    heart.className = "float-heart";
+    heart.textContent = symbols[i % symbols.length];
+    heart.style.left = Math.random() * 100 + "%";
+    heart.style.fontSize = (12 + Math.random() * 22) + "px";
+    heart.style.animationDelay = (Math.random() * 10) + "s";
+    heart.style.animationDuration = (7 + Math.random() * 8) + "s";
+    container.appendChild(heart);
+  }
+}
+
+createBackgroundHearts();
+showScreen(1);
+</script>
+
+</body>
+</html>
